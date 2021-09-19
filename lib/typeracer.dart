@@ -207,6 +207,7 @@ class _TypeRaceState extends State<TypeRace> {
 
                           setState(() {
                             if (text == finaltext[pos] || text == "4221") {
+                              //4221 is a cheat code
                               nblettres += 1;
                               if (finaltext.length > 1 && text != "4221") {
                                 finaltext = finaltext.substring(1);
@@ -215,6 +216,7 @@ class _TypeRaceState extends State<TypeRace> {
                                   speed = (nblettres / 5) /
                                       (chrono.elapsedMicroseconds *
                                           0.000000016667);
+                                  //formula for calculating speed
                                   speeddisplay =
                                       speed.toString().substring(0, 2);
                                 }
@@ -256,6 +258,7 @@ class _TypeRaceState extends State<TypeRace> {
                                     speed = (nblettres / 5) /
                                         (chrono.elapsedMicroseconds *
                                             0.000000016667);
+                                    //formula for calculating speed
                                     speeddisplay =
                                         speed.toString().substring(0, 2);
                                   }
@@ -307,4 +310,9 @@ class _TypeRaceState extends State<TypeRace> {
                     ],
                   )),
             ),
-          
+          ),
+        ],
+      ),
+    );
+  }
+}
